@@ -1,0 +1,268 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/*NAVBAR*/
+
+.top-bar {
+    display: flex;
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    height: 64px;
+    background-color: black;
+    align-items: center;
+    top: 50%;
+}
+
+.container-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-right: 30px;
+}
+
+/*LOGO*/
+
+.logo {
+    font-family: 'Uber Move Text', sans-serif;
+    display: flex;
+    position: relative;
+    font-size: 18px;
+    text-align: left;
+    font-weight: 400;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+    width: 50px;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+}
+
+/*MENU*/
+
+.navbar-left {
+    justify-content: flex-start;
+    flex-grow: 1;
+    padding: 0;
+    margin: 0 24px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+}
+
+nav ul li {
+    font-family: 'Uber Move Text', sans-serif;
+    display: inline-flex;
+    font-size: 14px;
+    color: white;
+    font-weight: 500;
+    padding: 10px 12px;
+}
+
+nav ul li a {
+    display: flex;
+    text-decoration: none;
+    font-size: 14px;
+    color: white;
+    align-items: center;
+}
+
+.fa-chevron-down {
+    font-size: 12px;
+    margin-left: 4px;
+}
+
+.fa-chevron-right {
+    font-size: 12px;
+    margin-left: 4px;
+}
+
+.dropdown,
+.dropdown-menu {
+    position: relative;
+}
+
+.nav-dropdown li a,
+.dropdown-menu li a {
+    display: block;
+    line-height: 20px;
+    width: 150px;
+    text-align: left;
+}
+
+.nav-dropdown,
+.dropdown-menu {
+    top: 54px;
+    background-color: black;
+    position: absolute;
+    display: none;
+    width: 200px;
+    z-index: 1;
+}
+
+.dropdownLink {
+    position: relative;
+}
+
+.nav-dropdownLink li a {
+    display: block;
+    line-height: 20px;
+}
+
+.nav-dropdownLink {
+    top: 0;
+    left: 100px;
+    background-color: black;
+    position: absolute;
+    display: none;
+    z-index: 1;
+}
+
+nav ul li a:hover {
+    background-color: rgb(120, 120, 120);
+    text-decoration: none;
+}
+
+a,
+a:hover,
+a:active,
+a:visited,
+a:focus {
+    text-decoration: none;
+    color: white;
+    padding: 4px;
+}
+
+.nav-mobile {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: transparent;
+    height: 50px;
+    width: 70px;
+}
+
+#nav-toggle {
+    position: absolute;
+    right: 18px;
+    top: 22px;
+    cursor: pointer;
+    padding: 10px 34px 16px 0px;
+}
+
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 4px;
+    width: 34px;
+    background: #ffffff;
+    position: absolute;
+    display: block;
+    content: '';
+    transition: all 300ms ease-in-out;
+}
+
+#nav-toggle span:before {
+    top: -10px;
+}
+
+#nav-toggle span:after {
+    bottom: -10px;
+}
+
+#nav-toggle.active span {
+    background-color: transparent;
+}
+
+#nav-toggle.active span:before,
+#nav-toggle.active span:after {
+    top: 0;
+}
+
+#nav-toggle.active span:before {
+    transform: rotate(45deg);
+}
+
+#nav-toggle.active span:after {
+    transform: rotate(-45deg);
+}
+
+.show {
+    display: block;
+}
+
+@media only screen and (max-width: 937px) {
+    nav ul li,
+    nav ul li a {
+        padding: 4px;
+        font-size: 12px;
+    }
+    .fa-chevron-down {
+        font-size: 10px;
+    }
+    .fa-chevron-right {
+        font-size: 10px;
+    }
+    .nav-dropdown {
+        top: 48px;
+    }
+}
+
+@media only screen and (max-width: 835px) {
+    .nav-mobile {
+        display: block;
+    }
+    .container-nav {
+        margin-right: 10px;
+    }
+    .logo {
+        margin-left: 80px;
+        font-size: 14px;
+    }
+    .navbar-left {
+        display: none;
+        flex-direction: column;
+        padding: 14px;
+        line-height: 20px;
+        text-align: center;
+        background: black;
+    }
+    nav ul li {
+        display: flex;
+        flex-direction: column;
+    }
+    ul.navbar-left {
+        /* !!!! */
+        margin-top: 164px;
+        background-color: black;
+        justify-content: flex-start;
+        margin-right: -10px;
+        margin-left: -130px;
+        z-index: 1;
+    }
+    .nav-dropdown {
+        position: static;
+    }
+    .nav-dropdownLink {
+        top: auto;
+    }
+}
+
+@media screen and (min-width: 834px) {
+    .navbar-left {
+        display: block !important;
+    }
+}

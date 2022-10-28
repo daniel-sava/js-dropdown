@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Responsive Drop-down Menu Bar</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="./script.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class="logo font-effect-shadow-multiple">
+            <a href="#" target="_self">LOGO</a>
+        </div>
+
+        <div class="nav-mobile"><a id="nav-toggle" href="#"><span></span></a></div>
+
+        <nav class="container-nav">
+            <ul class="navbar-left">
+
+                <li>
+                    <a href="#" class="dropdown"> DROPDOWN 1
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                    <ul class="nav-dropdown">
+                        <li>
+                            <a href="#" class="dropdownLink">Link 1
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                            <ul class="nav-dropdownLink">
+                                <li>
+                                    <a href="#">111</a>
+                                </li>
+                                <li>
+                                    <a href="#">122</a>
+                                </li>
+                                <li>
+                                    <a href="#">133</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#" class="dropdownLink">Link
+                                2 <i class="fa-solid fa-chevron-right"></i></a>
+                            <ul class="nav-dropdownLink">
+                                <li>
+                                    <a href="#">211</a>
+                                </li>
+                                <li>
+                                    <a href="#">222</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#" class="dropdownLink">Link
+                                3 <i class="fa-solid fa-chevron-right"></i></a>
+                            <ul class="nav-dropdownLink">
+                                <li>
+                                    <a href="#">311</a>
+                                </li>
+                                <li>
+                                    <a href="#">322</a>
+                                </li>
+                                <li>
+                                    <a href="#">333</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </li>
+
+
+                <li>
+                    <a href="#" class="dropdown"> DROPDOWN 2
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                    <ul class="nav-dropdown">
+                        <li>
+                            <a href="#">Link 2-1</a>
+                        </li>
+                        <li>
+                            <a href="#">Link 2-2</a>
+                        </li>
+                        <li>
+                            <a href="#">Link 2-3</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+        </nav>
+    </div>
+
+</body>
+
+
+</html>
